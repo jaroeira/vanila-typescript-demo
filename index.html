@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie List</title>
+  </head>
+  <body class="relative min-h-screen">
+    <header class="bg-slate-300 text-gray-500 py-2 px-4">Movie List</header>
+    <main style="padding-bottom: 6.5rem">
+      <div class="flex flex-col md:flex-row justify-center my-4 gap-4">
+        <div
+          class="flex flex-col md:flex-row gap-4 rounded overflow-hidden shadow-lg bg-white p-5"
+        >
+          <input id="login" placeholder="Login" class="disabled:bg-gray-200" />
+          <input
+            id="senha"
+            placeholder="Senha"
+            type="password"
+            class="disabled:bg-gray-200"
+          />
+          <input
+            id="api-key"
+            placeholder="Api Key"
+            class="disabled:bg-gray-200"
+          />
+          <button
+            id="login-button"
+            disabled
+            class="px-2 py-1 bg-blue-300 rounded cursor-pointer disabled:bg-gray-400 disabled:cursor-not-allowed"
+          >
+            Login
+          </button>
+        </div>
+        <div
+          class="rounded overflow-hidden shadow-lg bg-white flex items-center gap-2 px-2"
+        >
+          <input id="search" placeholder="Escreva..." />
+          <button
+            id="search-button"
+            class="px-2 py-1 bg-blue-300 rounded cursor-pointer disabled:bg-gray-400 disabled:cursor-not-allowed"
+            disabled
+          >
+            Pesquisar Filme
+          </button>
+        </div>
+      </div>
+
+      <!-- Movie List -->
+
+      <div
+        class="w-full md:w-3/4 mx-auto flex flex-col gap-4 my-4"
+        id="movie-list"
+      ></div>
+
+      <!-- cards -->
+    </main>
+    <footer class="bg-gray-600 text-white py-10 px-20 absolute bottom-0 w-full">
+      <div>
+        <p class="text-center">&copy; Copyright 2022 João Aroeira</p>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
